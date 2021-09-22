@@ -1,0 +1,306 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  --bgcolor: rgb(3, 25, 29);
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 2rem;
+  background: var(--bgcolor);
+}
+
+.container {
+  display: flex;
+  margin-top: 5rem;
+  justify-content: space-around;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+/* Botão 1 */
+
+.button1 .box {
+  position: relative;
+  padding: 0.5rem 0.8rem;
+  border-radius: 5px;
+  background: var(--bgcolor);
+  transition: 600ms ease-in-out;
+}
+
+.button1 .box:hover {
+  transition: 600ms ease-in-out;
+  box-shadow: 0 0 5px rgb(194, 230, 35), 0 0 20px rgb(194, 230, 35),
+    0 0 30px rgb(194, 230, 35), 0 0 40px rgba(194, 230, 35, 0.5);
+}
+.button1 .box:before {
+  content: '';
+  position: absolute;
+  background: white;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  transform: skew(2deg, 2deg);
+  z-index: -1;
+}
+
+.button1 .box:nth-child(1):before {
+  background: linear-gradient(315deg, #ff3c0b, #e619dc);
+}
+
+.button1 a {
+  color: #e619dc;
+  transition: 300ms ease-in-out;
+}
+
+.button1:hover a {
+  color: #fff;
+  transition: 300ms ease-in-out;
+}
+
+/* Botão 2 */
+
+.box2 {
+  background: greenyellow;
+  padding: 2px;
+  transition: 500ms ease-in-out;
+}
+
+.box2:hover {
+  transition: 500ms ease-in-out;
+  transform: rotate(720deg);
+  background: rgb(255, 47, 255);
+}
+
+.button2 a {
+  color: rgb(143, 216, 34);
+  transition: 500ms ease-in-out;
+}
+
+.button2 a:hover {
+  color: rgb(226, 38, 226);
+  transition: 500ms ease-in-out;
+}
+
+.button2 {
+  position: relative;
+  padding: 0.5rem 1rem;
+  border-radius: 30px 0 30px 0;
+  background: rgb(3, 25, 29);
+}
+
+/* Botão 3 */
+
+.box3 {
+  margin: 2rem;
+}
+
+.button3 {
+  position: relative;
+  width: auto;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #183954;
+}
+
+.button3 a {
+  position: absolute;
+  font-weight: 800;
+}
+
+.button3 p {
+  position: absolute;
+  font-weight: 800;
+}
+.button3 p:nth-child(1) {
+  color: #fff;
+  text-shadow: -2px 2px 0px #183954, -4px 4px 0px #183954, -6px 6px 0px #183954,
+    -8px 8px 0px #183954, -18px 18px 20px rgba(255, 255, 255, 0.5),
+    -18px 18px 50px rgba(255, 255, 255, 0.5);
+}
+
+.button3 p:nth-child(2) {
+  color: #2196f3;
+  opacity: 0.5;
+  animation: animate 3s ease-in-out infinite;
+}
+
+.button3 p:nth-child(3) {
+  color: #2196f3;
+  opacity: 0.5;
+  animation: animate 6s ease-in-out infinite;
+}
+.button3 p:nth-child(4) {
+  color: #2196f3;
+  animation: animate 4s ease-in-out infinite;
+}
+
+@keyframes animate {
+  0%,
+  100% {
+    clip-path: polygon(
+      0% 46%,
+      16% 45%,
+      33% 52%,
+      50% 61%,
+      68% 65%,
+      85% 61%,
+      100% 53%,
+      100% 100%,
+      0 100%
+    );
+  }
+  50% {
+    clip-path: polygon(
+      0% 66%,
+      14% 73%,
+      34% 76%,
+      50% 71%,
+      64% 62%,
+      79% 55%,
+      100% 51%,
+      100% 100%,
+      0 100%
+    );
+  }
+}
+
+/* Botão 4 */
+
+.button4 {
+  margin: 0 0 0 2rem;
+  border-bottom: 2px solid greenyellow;
+  border-right: 2px solid greenyellow;
+
+  padding: 0 2rem;
+  border-radius: 30px;
+  background: #fff;
+  transition: 600ms ease-in-out;
+}
+
+.button4:hover {
+  box-shadow: 0 0 15px rgb(255, 255, 235), 0 0 20px rgba(255, 255, 255, 1),
+    0 0 30px rgba(255, 255, 255, 0.8), 0 0 40px rgba(184, 255, 248, 0.6),
+    0 0 45px rgba(184, 255, 248, 0.5);
+  transition: 600ms ease-in-out;
+  animation: animate2 3s infinite;
+}
+
+@keyframes animate2 {
+  0%,
+  100% {
+    box-shadow: 0 0 15px rgb(255, 255, 235), 0 0 20px rgba(255, 255, 255, 1),
+      0 0 30px rgba(255, 255, 255, 0.8), 0 0 40px rgba(219, 255, 90, 1),
+      0 0 45px rgba(219, 255, 90, 1);
+  }
+
+  50% {
+    box-shadow: 0 0 15px rgb(255, 255, 235), 0 0 30px rgba(255, 255, 255, 1),
+      0 0 60px rgba(255, 255, 255, 0.8), 0 0 45px rgba(184, 255, 248, 0.6),
+      0 0 70px rgba(184, 255, 248, 0.5);
+  }
+}
+
+.button4 .box a {
+  color: var(--bgcolor);
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+/* Botão 5 */
+
+.button5 {
+  border: 2px solid greenyellow;
+  padding: 0.5rem 1rem;
+  transform: skew(-2deg, -2deg);
+  transition: 300ms;
+}
+
+.button5:hover {
+  box-shadow: 2px 3px 25px greenyellow;
+  transition: 300ms;
+}
+
+.button .box a {
+  font-size: 300;
+  transition: 1000ms ease;
+}
+
+.button5 .box a:hover {
+  font-weight: 500;
+  color: rgb(148, 224, 42);
+  transition: 1000ms ease;
+}
+
+/* Botão 6 */
+
+.button6 {
+  display: inline-block;
+  position: relative;
+  padding: 0.5rem 1rem;
+  animation: animate3 5s infinite;
+}
+
+@keyframes animate3 {
+  0%,
+  100% {
+    box-shadow: 3px 3px 6px greenyellow;
+    background: rgb(156, 27, 107);
+  }
+
+  25% {
+    box-shadow: -3px 3px 6px greenyellow;
+    background: rgb(156, 27, 107);
+  }
+
+  50% {
+    box-shadow: -3px -3px 12px greenyellow;
+    background: rgb(156, 27, 107);
+  }
+  75% {
+    box-shadow: 3px -3px 12px greenyellow;
+    background: rgb(156, 27, 107);
+  }
+}
+
+.button6 .box a:hover {
+  animation: animate4 250ms infinite;
+}
+
+@keyframes animate4 {
+  0%,
+  100% {
+    font-size: 2.1rem;
+  }
+
+  50% {
+    font-size: 2rem;
+  }
+}
+
+/* Footer */
+
+#rodape {
+  display: grid;
+  margin-top: 10rem;
+  place-content: center;
+  font-size: 1rem;
+  color: white;
+}
+
+#rodape span {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-left: 0.5rem;
+  margin-right: 0.2rem;
+  color: greenyellow;
+  border: 1px solid greenyellow;
+}
