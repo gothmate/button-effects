@@ -15,7 +15,6 @@ body {
 .container {
   display: flex;
   margin-top: 5rem;
-  margin: 5rem 3rem;
   justify-content: space-evenly;
 }
 
@@ -133,7 +132,7 @@ a {
 
 .button3 p:nth-child(2) {
   color: #2196f3;
-  opacity: 0.5;
+  opacity: 0.6;
   animation: animate 3s ease-in-out infinite;
 }
 
@@ -144,7 +143,7 @@ a {
 }
 .button3 p:nth-child(4) {
   color: #2196f3;
-  animation: animate 8s ease-in-out infinite;
+  animation: animate 4s ease-in-out infinite;
 }
 
 @keyframes animate {
@@ -165,12 +164,12 @@ a {
   50% {
     clip-path: polygon(
       0% 66%,
-      14% 73%,
+      14% 68%,
       34% 76%,
-      50% 71%,
+      50% 69%,
       64% 62%,
-      79% 55%,
-      100% 51%,
+      79% 58%,
+      100% 65%,
       100% 100%,
       0 100%
     );
@@ -233,7 +232,7 @@ a {
   transition: 300ms;
 }
 
-.button .box a {
+.button .box5 a {
   font-size: 300;
   transition: 1000ms ease;
 }
